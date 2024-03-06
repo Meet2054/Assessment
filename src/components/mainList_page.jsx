@@ -1,36 +1,18 @@
-import React from 'react';
-import { Search } from "lucide-react";
-
-
-
-function SearchBar() {
-  return (
-    <form>
-      <Search
-        className="absolute  "
-      />
-      <input className=' rounded-md  ' type="text" placeholder="         Search" />
-    </form>
-  );
-}
-
+import BrandList from "./BrandList";
+import Navbar from "./Navbar";
+import SmallComponent from "./SmallComponent";
 
 function MainListPage() {
   return (
     <div>
-      <div className='flex flex-col bg-green-300 w-[173vh] h-[3%] m-1 '>
-        <div className="flex flex-row justify-between px-4">
-          <h1>Products</h1>
-        <div className="flex flex-row">
-          <SearchBar />
-          {/* Content Goes Here */}
-        </div>
-        </div>
+      <div className='flex flex-col w-[173vh] h-[5%] m-1 '>
+        <Navbar />
+      </div>
+      <div className='flex'>
+        <SmallComponent/>
       </div>
       <div className='flex flex-col'>
-        {/* Additional Content Goes Here */}
-      </div>
-      <div className='flex flex-col'>
+        <BrandList/>
         {/* Additional Content Goes Here */}
       </div>
     </div>
