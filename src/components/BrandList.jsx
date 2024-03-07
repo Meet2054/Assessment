@@ -56,6 +56,8 @@ const BrandList = () => {
     };
     return (
         <div className="w-full pt-3">
+            
+
             <table className="table-auto divide-gray-500 border-2 border-black rounded-md w-full">
                 <thead className="h-[40px] align">
                     <tr>
@@ -86,6 +88,8 @@ const BrandList = () => {
                     ))}
                 </tbody>
             </table>
+
+           
         </div>
     );
 };
