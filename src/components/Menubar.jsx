@@ -131,10 +131,13 @@ const Menubar = () => {
           </button>
           <button   className='w-[95%] h-10 rounded-md p-2 mb-2 inline-flex '>
           <HelpCircle className='h-6 w-6 mr-2' />
-          <h2>Help and first step</h2>
+          <h2 >Help and first step</h2>
           </button>
-          <button   className='w-[95%] h-10 bg-gray-300 rounded-md p-2'>
-            
+          <button   className='w-[95%] h-10 bg-gray-300 rounded-md p-2 inline-flex  '>
+            <h2 className='mr-1'>days left on trail</h2>
+            <button   className='w-[35%] h-8   rounded-md  inline-flex  text-white bg-black text-[10px] pl-2 '>
+              <h2 className='mt-1' >Add billing</h2>
+          </button>
           </button>
         </footer>
     </div>

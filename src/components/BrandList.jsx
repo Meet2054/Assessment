@@ -1,7 +1,8 @@
-// import React from 'react';
+import React, { useState} from 'react';
 
 const brand = [
     {
+        logo: "/paypal.png",
         name: "Nike",
         description: "USA",
         member: "2",
@@ -10,30 +11,49 @@ const brand = [
         nextMeeting: "12/12/2022"
     },
     {
-      name: "Nike",
-      description: "USA",
-      member: "2",
-      catogories: "Shoes",
-      tags: "Sports",
-      nextMeeting: "12/12/2022"
-  },{
-    name: "Nike",
-    description: "USA",
-    member: "2",
-    catogories: "Shoes",
-    tags: "Sports",
-    nextMeeting: "12/12/2022"
-},{
-  name: "Nike",
-  description: "USA",
-  member: "2",
-  catogories: "Shoes",
-  tags: "Sports",
-  nextMeeting: "12/12/2022"
-},
+        logo: "/paypal.png",
+        name: "Nike",
+        description: "USA",
+        member: "2",
+        catogories: "Shoes",
+        tags: "Sports",
+        nextMeeting: "12/12/2022"
+    },
+    {
+        name: "Nike",
+        logo: "/paypal.png",
+        description: "USA",
+        member: "2",
+        catogories: "Shoes",
+        tags: "Sports",
+        nextMeeting: "12/12/2022"
+    },
+    {
+        name: "Nike",
+        logo: "/paypal.png",
+        description: "USA",
+        member: "2",
+        catogories: "Shoes",
+        tags: "Sports",
+        nextMeeting: "12/12/2022"
+    },
 ];
 
 const BrandList = () => {
+    const [selectedRows, setSelectedRows] = useState([]);
+
+    const handleCheckboxClick = (index) => {
+        // Toggle the selected state of the row
+        setSelectedRows((prevSelectedRows) => {
+            const isSelected = prevSelectedRows.includes(index);
+
+            if (isSelected) {
+                return prevSelectedRows.filter((selectedIndex) => selectedIndex !== index);
+            } else {
+                return [...prevSelectedRows, index];
+            }
+        });
+    };
     return (
         <div className="w-full pt-3">
             <table className="table-auto divide-gray-500 border-2 border-black rounded-md w-full">
@@ -49,8 +69,14 @@ const BrandList = () => {
                 </thead>
                 <tbody className="divide-y divide-gray-500">
                     {brand.map((brandItem, index) => (
-                        <tr key={index}>
-                            <td className="px-4 py-2 border-2 border-gray-200">{brandItem.name}</td>
+                        <tr key={index} className={selectedRows.includes(index) ? 'bg-gray-100' : ''}>
+                            <td className="px-4 py-2 border-2 border-gray-200">
+                              <div className="flex items-center">
+                                 <input type="checkbox" onClick={() => handleCheckboxClick(index)} className="mr-2" />
+                                 <img src={brandItem.logo} alt="Brand.logo" className="w-6 h-6 mr-2" />
+                                <td className="px-4 py-2  border-gray-200">{brandItem.name}</td>
+                              </div>
+                            </td>
                             <td className="px-4 py-2 border-2 border-gray-200">{brandItem.description}</td>
                             <td className="px-4 py-2 border-2 border-gray-200">{brandItem.member}</td>
                             <td className="px-4 py-2 border-2 border-gray-200">{brandItem.catogories}</td>
