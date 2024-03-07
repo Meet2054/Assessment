@@ -23,10 +23,10 @@ function SearchBar() {
           <div className='flex justify-around px-2'>
             <SearchBar />
           </div>
-          <div className='flex justify-around px-2'>
+          <div className='flex justify-around px-2 border-2 rounded-md mr-2'>
             <MessagesSquare />
           </div>
-          <div className='flex justify-around px-2'>
+          <div className='flex justify-around px-2 border-2 rounded-md'>
             <Settings />
           </div>
         </div>
