@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Archive, ChevronDown, Plus, Trash } from 'lucide-react';
+import { Archive, ChevronDown, Hash, Plus, Trash } from 'lucide-react';
 
 const PEOPLE_URL = [
     '/person-1.png',
@@ -12,7 +12,7 @@ const brand = [
     {
         logo: "/paypal.png",
         name: "Nike",
-        description: "USA",
+        description: "this is a description of the brand Nike",
         member: "2",
         categories: "Shoes", // corrected typo
         tags: "Sports",
@@ -107,7 +107,9 @@ const BrandList = () => {
                                     <span className="px-4 py-2 border-gray-200">{brandItem.name}</span>
                                 </div>
                             </td>
-                            <td className="px-4 py-2 border-2 border-gray-200">{brandItem.description}</td>
+                            <td className="px-4 py-2 border-2 border-gray-200 overflow-hidden whitespace-nowrap">
+                                <span className="inline-block max-w-[200px] overflow-hidden overflow-ellipsis">{brandItem.description}</span>
+                            </td>                            
                             <td className="px-4 py-2 border-2 border-gray-200 ">
                                 <div className="flex ml-[-2]">
                                 <span className="flex -space-x-3 overflow-hidden ">
@@ -119,7 +121,12 @@ const BrandList = () => {
                                 </div>
                             </td>
                             <td className="px-4 py-2 border-2 border-gray-200">{brandItem.categories}</td>
-                            <td className="px-4 py-2 border-2 border-gray-200">{brandItem.tags}</td>
+                            <td className="px-4 py-2 border-2 border-gray-200">
+                            <p className='border-2 w-[40px] h-auto rounded-xl flex flex-row'>
+                            <Hash className="h-4 w-4 mx-2 " />
+                            {brandItem.tags}
+                            </p>
+                            </td>
                             <td className="px-4 py-2 border-2 border-gray-200">{brandItem.nextMeeting}</td>
                         </tr>
                     ))}
