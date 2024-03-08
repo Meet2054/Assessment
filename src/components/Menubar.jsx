@@ -169,17 +169,18 @@ const Menubar = () => {
           <HelpCircle className='h-6 w-6 mr-2' />
           <h2>Help and first step</h2>
         </button>
-        <button className='w-[95%] h-10 bg-gray-300 rounded-md p-2 inline-flex  flex-row justify-between '>
-        <div className='flex'>
-          <div className="w-6 h-6 bg-white flex flex-row ml-2 pl-2">
-            <h2>7</h2>  
-          </div>  
-            <h2 className='mr-8 ml-3'>days left on trail</h2>
+        <div className='w-[95%] h-10 bg-gray-300 rounded-md px-2 py-2.5 flex items-center justify-between'>
+          <div className="flex items-center">
+            <div className="w-6 h-6 bg-white flex items-center justify-center mr-2">
+              <h2 className='px-1.5'>7</h2>
+              {/* On the place of 7 there will be var of useState */}
+            </div>
+            <h1 className='text-[14px]'>days left on trail</h1>
           </div>
-          <button className='w-[35%] h-8 rounded-md inline-flex text-white bg-black text-[10px] p-1  pl-3'>
-            <h2 className=' text-[15px]' >Add billing</h2>
+          <button className='w-[35%] h-8 rounded-md inline-flex text-white bg-black text-[10px] p-1 pl-1'>
+            <h2 className='text-[11px] px-1 py-1'>Add billing</h2>
           </button>
-        </button>
+        </div>
       </footer>
   </div>  )
 }

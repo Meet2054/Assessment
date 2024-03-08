@@ -1,0 +1,22 @@
+First open the folder in VS Code 
+Once You open the folder 
+Do run th command 
+"npm install"
+It will install all needed dependecy in you file
+
+Then run the command "npm run dev"
+
+it will give a link like
+"  ➜  Local:   http://localhost:5173/"
+click ctrl + on the lonk
+or 
+type  "http://localhost:5173/"
+in the browser it will take 20 sec as the code is first time running in your pc
+
+
+--------------------------------------------------------------------------------
+
+The Tech used in the code 
+Vite + React - to set the web SDK
+Tailwind CSS - To give better and clean css property
+lucide-react - Lib for icon 	
