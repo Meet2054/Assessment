@@ -6,7 +6,7 @@ const Menubar = () => {
   return (
     <div className="flex flex-col min-h-screen m-3 justify-between w-full overflow-x-auto">
       <div className='flex flex-col justify-between'>
-        <div className='flex justify-between'>
+        <div className='flex justify-between w-auto'>
           <div className="flex flex-row">
             <div className="w-10 h-10 bg-black rounded-md">
               <h1 className='text-white pl-2 pt-1'>Lg</h1>
@@ -16,7 +16,7 @@ const Menubar = () => {
               <h1 className='text-[15px] pl-2'>InnovateHub</h1>
             </div>
           </div>
-          <img src="/Avater.jpg" className=' w-10 h-10 rounded-full  ml-[120px]' alt="Avatar"/>
+          <img src="/Avater.jpg" className=' w-10 h-10 rounded-full' alt="Avatar"/>
         </div>
         <div className='mt-7 flex flex-col border-2 rounded-md'>
           <div className=''>
@@ -127,12 +127,15 @@ const Menubar = () => {
           <HelpCircle className='h-6 w-6 mr-2' />
           <h2>Help and first step</h2>
         </button>
-        <button className='w-[95%] h-10 bg-gray-300 rounded-md p-2 inline-flex  flex-row'>
-          <div className="w-6 h-6 bg-white">
+        <button className='w-[95%] h-10 bg-gray-300 rounded-md p-2 inline-flex  flex-row justify-between'>
+          <div className='flex flex-row'>
+          <div className="w-6 h-6 bg-white flex pl-2">
             <h2>7</h2>  
             {/* On the place of 7 there will be var of useState */}
           </div>  
-          <h2 className='mr-8 ml-1'>days left on trail</h2>
+          <h2 className=' pl-3 text-[14px]'>days left on trail</h2>
+
+          </div>
           <button className='w-[35%] h-8 rounded-md inline-flex text-white bg-black text-[10px] p-1  pl-3'>
             <h2 className=' text-[15px]' >Add billing</h2>
           </button>

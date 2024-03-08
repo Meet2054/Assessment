@@ -5,24 +5,21 @@ import { Archive, ChevronDown, Plus, Trash } from 'lucide-react';
 
 function MainListPage() {
   return (
-    <div className="flex flex-col justify-between h-screen w-full overflow-x-auto">
-    <div>
-
+    <div className="flex flex-col justify-between w-full">
       <div>
         <Navbar />
+        <div className="flex">
+          <SmallComponent />
+        </div>
+        <div className="flex flex-col ml-1">
+          <BrandList />
+          {/* Additional Content Goes Here */}
+        </div>
       </div>
-      <div className="flex">
-        <SmallComponent />
-      </div>
-      <div className="flex flex-col ml-1">
-        <BrandList />
-        {/* Additional Content Goes Here */}
-      </div>
-    </div>
       <div className="flex justify-center items-end">
-        <div className="flex flex-row w-[55vh] h-[6vh] border-2 border-gray-200 rounded-2xl" >
-          <div className="flex flex-row ">
-            <div className="w-6 h-6 bg-black m-4 p-1 text-white px-2 rounded-md" >
+        <div className="flex flex-row w-[55vh] h-[6vh] border-2 border-gray-200 rounded-2xl">
+          <div className="flex flex-row">
+            <div className="w-6 h-6 bg-black m-4 p-1 text-white px-2 rounded-md">
               3
               {/* Instead of 3 there will be useState var*/}
             </div>
