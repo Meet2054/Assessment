@@ -1,11 +1,11 @@
 import BrandList from "./BrandList";
 import Navbar from "./Navbar";
 import SmallComponent from "./SmallComponent";
-import { Archive, ChevronDown, Delete, Plus, Trash } from 'lucide-react';
+import { Archive, ChevronDown, Plus, Trash } from 'lucide-react';
 
 function MainListPage() {
   return (
-    <div className="flex flex-col justify-between h-screen w-[161vh]">
+    <div className="flex flex-col justify-between h-screen w-full overflow-x-auto">
     <div>
 
       <div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const PEOPLE_URL = [
     '/person-1.png',
@@ -13,7 +13,7 @@ const brand = [
         name: "Nike",
         description: "USA",
         member: "2",
-        categories: "Shoes", // corrected typo
+        categories: "Shoes",
         tags: "Sports",
         nextMeeting: "12/12/2022"
     },
@@ -22,39 +22,34 @@ const brand = [
         name: "Nike",
         description: "USA",
         member: "2",
-        categories: "Shoes", // corrected typo
+        categories: "Shoes",
         tags: "Sports",
         nextMeeting: "12/12/2022"
-    },{
+    },
+    {
         logo: "/paypal.png",
         name: "Nike",
         description: "USA",
         member: "2",
-        categories: "Shoes", // corrected typo
+        categories: "Shoes",
         tags: "Sports",
         nextMeeting: "12/12/2022"
-    },{
+    },
+    {
+        logo: "/paypal.png",
+        name: "Nike",
+        description: "This is a description of the brand , it is a very long description of the brand and it is very long",
+        member: "2",
+        categories: "Shoes",
+        tags: "Sports",
+        nextMeeting: "12/12/2022"
+    },
+    {
         logo: "/paypal.png",
         name: "Nike",
         description: "USA",
         member: "2",
-        categories: "Shoes", // corrected typo
-        tags: "Sports",
-        nextMeeting: "12/12/2022"
-    },{
-        logo: "/paypal.png",
-        name: "Nike",
-        description: "USA",
-        member: "2",
-        categories: "Shoes", // corrected typo
-        tags: "Sports",
-        nextMeeting: "12/12/2022"
-    },{
-        logo: "/paypal.png",
-        name: "Nike",
-        description: "USA",
-        member: "2",
-        categories: "Shoes", // corrected typo
+        categories: "Shoes",
         tags: "Sports",
         nextMeeting: "12/12/2022"
     },
@@ -96,10 +91,12 @@ const BrandList = () => {
                                 <div className="flex items-center">
                                     <input type="checkbox" onClick={() => handleCheckboxClick(index)} className="mr-2" />
                                     <img src={brandItem.logo} alt="Brand.logo" className="w-6 h-6 mr-2" />
-                                    <span className="px-4 py-2 border-2 border-gray-200">{brandItem.name}</span>
+                                    <span className="px-4 py-2 border-gray-200">{brandItem.name}</span>
                                 </div>
                             </td>
-                            <td className="px-4 py-2 border-2 border-gray-200">{brandItem.description}</td>
+                            <td className="px-4 py-2 border-2 border-gray-200 overflow-hidden whitespace-nowrap">
+                                <span className="inline-block max-w-[200px] overflow-hidden overflow-ellipsis">{brandItem.description}</span>
+                            </td>
                             <td className="px-4 py-2 border-2 border-gray-200 ">
                                 <div className="flex ml-[-2]">
                                 <span className="flex -space-x-3 overflow-hidden ">

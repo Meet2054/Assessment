@@ -4,9 +4,9 @@ import { PenTool, Plus, PlusSquare, File, ChevronDown, UserPlus, HelpCircle, Vol
 
 const Menubar = () => {
   return (
-    <div className="flex flex-col min-h-screen m-3 justify-between">
+    <div className="flex flex-col min-h-screen m-3 justify-between w-full overflow-x-auto">
       <div className='flex flex-col justify-between'>
-        <div className='flex '>
+        <div className='flex justify-between'>
           <div className="flex flex-row">
             <div className="w-10 h-10 bg-black rounded-md">
               <h1 className='text-white pl-2 pt-1'>Lg</h1>
@@ -16,11 +16,11 @@ const Menubar = () => {
               <h1 className='text-[15px] pl-2'>InnovateHub</h1>
             </div>
           </div>
-          <img src="/Avater.jpg" className=' w-14 h-14 rounded-full  ml-[120px]' alt="Avatar"/>
+          <img src="/Avater.jpg" className=' w-10 h-10 rounded-full  ml-[120px]' alt="Avatar"/>
         </div>
-        <div className='mt-7 flex flex-col'>
-          <div>
-            <button className='w-[100%] h-15 rounded-md border-2 inline-flex p-2 hover:bg-gray-100 justify-between'>
+        <div className='mt-7 flex flex-col border-2 rounded-md'>
+          <div className=''>
+            <button className='w-[100%] h-15 rounded-md  inline-flex p-2 hover:bg-gray-100 justify-between hover:border-2 '>
               <div className="flex flex-row">
                 <PenTool className='h-6 w-6' />
                 <h2 className='ml-2'>Design Team</h2>
@@ -32,7 +32,7 @@ const Menubar = () => {
             </button>
           </div>
           <div>
-            <button className='w-[100%] h-15 rounded-md border-2 inline-flex p-2 hover:bg-gray-100 justify-between'>
+            <button className='w-[100%] h-15 rounded-md hover:border-2 inline-flex p-2 hover:bg-gray-100 justify-between'>
               <div className="flex flex-row">
                 <Volume1 className='h-6 w-6' />
                 <h2 className='ml-2 '>Marketing Team</h2>
@@ -44,7 +44,7 @@ const Menubar = () => {
             </button>
           </div>
           <div>
-            <button className='w-[100%] h-15 rounded-md border-2 inline-flex p-2 hover:bg-gray-100 justify-between'>
+            <button className='w-[100%] h-15 rounded-md hover:border-2 inline-flex p-2 hover:bg-gray-100 justify-between'>
               <div className="flex flex-row">
                 <ChevronsLeftRight className='h-6 w-6' />
                 <h2 className='text-[14px] '>Development Team</h2>
