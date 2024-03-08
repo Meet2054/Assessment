@@ -1,6 +1,6 @@
-import { ChevronsLeftRight, Image } from 'lucide-react'
+import { ChevronsLeftRight} from 'lucide-react'
 // import React from 'react'
-import { PenTool, Plus, Braces, PlusSquare, File, ChevronDown, UserPlus, HelpCircle, Volume1 } from 'lucide-react';
+import { PenTool, Plus, PlusSquare, File, ChevronDown, UserPlus, HelpCircle, Volume1 } from 'lucide-react';
 
 const Menubar = () => {
   return (
