@@ -127,8 +127,8 @@ const Menubar = () => {
           <HelpCircle className='h-6 w-6 mr-2' />
           <h2>Help and first step</h2>
         </button>
-        <button className='w-[95%] h-10 bg-gray-300 rounded-md p-2 inline-flex  flex-row justify-between'>
-          <div className='flex flex-row'>
+        <button className='w-[95%] h-12 bg-gray-300 rounded-md p-2 inline-flex  flex-row justify-between'>
+          <div className='flex flex-row p-1'>
           <div className="w-6 h-6 bg-white flex pl-2">
             <h2>7</h2>  
             {/* On the place of 7 there will be var of useState */}
@@ -136,8 +136,8 @@ const Menubar = () => {
           <h2 className=' pl-3 text-[14px]'>days left on trail</h2>
 
           </div>
-          <button className='w-[35%] h-8 rounded-md inline-flex text-white bg-black text-[10px] p-1  pl-3'>
-            <h2 className=' text-[15px]' >Add billing</h2>
+          <button className='w-[35%] h-8 rounded-md inline-flex text-white bg-black text-[10px] '>
+            <h2 className=' text-[15px] pl-4 pt-1' >Add billing</h2>
           </button>
         </button>
       </footer>
