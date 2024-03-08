@@ -16,7 +16,7 @@ const brand = [
         member: "2",
         categories: "Shoes", // corrected typo
         tags: "Sports",
-        nextMeeting: "12/12/2022"
+        nextMeeting: "30 min"
     },
     {
         logo: "/paypal.png",
@@ -25,7 +25,7 @@ const brand = [
         member: "2",
         categories: "Shoes", // corrected typo
         tags: "Sports",
-        nextMeeting: "12/12/2022"
+        nextMeeting: "tommorow"
     },{
         logo: "/paypal.png",
         name: "Nike",
@@ -33,7 +33,7 @@ const brand = [
         member: "2",
         categories: "Shoes", // corrected typo
         tags: "Sports",
-        nextMeeting: "12/12/2022"
+        nextMeeting: "1 week"
     },{
         logo: "/paypal.png",
         name: "Nike",
@@ -80,7 +80,7 @@ const BrandList = () => {
     };
 
     const checkedCheckboxCount = selectedRows.length;
-    const selectedBrand = brand[selectedRows[0]]; // Assuming only one brand can be selected
+    // const selectedBrand = brand[selectedRows[0]]; // Assuming only one brand can be selected
 
     return (
     <div className=''>
@@ -120,14 +120,27 @@ const BrandList = () => {
                                 </span>    
                                 </div>
                             </td>
-                            <td className="px-4 py-2 border-2 border-gray-200">{brandItem.categories}</td>
                             <td className="px-4 py-2 border-2 border-gray-200">
-                            <p className='border-2 w-[40px] h-auto rounded-xl flex flex-row'>
-                            <Hash className="h-4 w-4 mx-2 " />
-                            {brandItem.tags}
-                            </p>
+                                <div className='flex flex-row items-center'>
+                                    <div className="border-2 rounded-md text-gray-500 bg-red-200 flex flex-row" style={{ width: `${brandItem.categories.length * 14}px` }}>
+                                    <Hash className="h-4 w-4" />
+                                        {brandItem.categories}
+                                    </div>
+                                </div>
                             </td>
-                            <td className="px-4 py-2 border-2 border-gray-200">{brandItem.nextMeeting}</td>
+                            <td className="px-4 py-2 border-2 border-gray-200">
+                            <div className='border-2 w-[80px] pl-1 h-auto rounded-xl flex flex-row text-gray-500'>
+                                <Hash className="h-4 w-4 " />
+                                {brandItem.tags}
+                            </div>
+                            </td>
+                            <td className="px-4 py-2 border-2 border-gray-200">
+                                <div className='flex flex-row items-center'>
+                                    <div className="border-2 rounded-md text-gray-500 bg-red-200 flex flex-row pl-2" style={{ width: `${brandItem.categories.length * 20}px` }}>
+                                        {brandItem.nextMeeting}
+                                    </div>
+                                </div>
+                            </td> 
                         </tr>
                     ))}
                 </tbody>
@@ -145,7 +158,7 @@ const BrandList = () => {
                                   <h2 className="pt-5">selected</h2>
                               </div>
                               <div>
-                                  <button className="w-[100px] h-10 rounded-md border-2 border-gray-300 m-2 inline-flex hover:bg-gray-200 ">
+                                  <button className="w-[100px] h-10 rounded-md border-2 border-gray-300 m-2 pr-1 inline-flex hover:bg-gray-200 ">
                                   <Archive className="h-5 w-5 m-2" />
                                   <h2 className="mt-[10px] font-bold">Archive</h2>
                                   </button>
