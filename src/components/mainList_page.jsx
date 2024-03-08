@@ -7,6 +7,7 @@ function MainListPage() {
     <div className="flex flex-col justify-between w-full">
       <div>
         <Navbar />
+        <hr></hr>
         <div className="flex">
           <SmallComponent />
         </div>

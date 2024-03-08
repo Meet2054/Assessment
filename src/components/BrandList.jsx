@@ -11,52 +11,52 @@ const PEOPLE_URL = [
 const brand = [
     {
         logo: "/paypal.png",
-        name: "Nike",
+        name: "Paypal",
         description: "this is a description of the brand Nike",
         member: "2",
-        categories: "Shoes", // corrected typo
-        tags: "Sports",
+        categories: "MarketPlace", // corrected typo
+        tags: "MarketPlace",
         nextMeeting: "30 min"
     },
     {
-        logo: "/paypal.png",
-        name: "Nike",
-        description: "USA",
+        logo: "/Shopify.jpg",
+        name: "Shopify",
+        description: "Introducing cloud based pament system",
         member: "2",
-        categories: "Shoes", // corrected typo
-        tags: "Sports",
+        categories: "Ecommerce", // corrected typo
+        tags: "Ecommerce",
         nextMeeting: "tommorow"
     },{
-        logo: "/paypal.png",
-        name: "Nike",
-        description: "USA",
+        logo: "/google.jpg",
+        name: "Google",
+        description: "Offer a comprehensive payment solution",
         member: "2",
-        categories: "Shoes", // corrected typo
-        tags: "Sports",
+        categories: "Automation", // corrected typo
+        tags: "Automation",
         nextMeeting: "1 week"
     },{
-        logo: "/paypal.png",
-        name: "Nike",
-        description: "USA",
+        logo: "/Microsoft.jpg",
+        name: "Microsoft",
+        description: "Lunch a advisory service rffr",
         member: "2",
-        categories: "Shoes", // corrected typo
-        tags: "Sports",
+        categories: "Publishing", // corrected typo
+        tags: "Publishing",
         nextMeeting: "12/12/2022"
     },{
-        logo: "/paypal.png",
-        name: "Nike",
-        description: "USA",
+        logo: "/disney.jpg",
+        name: "Disney",
+        description: "Introducing a B2B solution for payment",
         member: "2",
-        categories: "Shoes", // corrected typo
-        tags: "Sports",
+        categories: "Web Service", // corrected typo
+        tags: "Technology",
         nextMeeting: "12/12/2022"
     },{
-        logo: "/paypal.png",
-        name: "Nike",
-        description: "USA",
+        logo: "/intercom.jpg",
+        name: "Intercom",
+        description: "Implement a AI-Driven payment solution",
         member: "2",
-        categories: "Shoes", // corrected typo
-        tags: "Sports",
+        categories: "Technology", // corrected typo
+        tags: "Technology",
         nextMeeting: "12/12/2022"
     },
     // Add more brand objects as needed
@@ -129,14 +129,17 @@ const BrandList = () => {
                                 </div>
                             </td>
                             <td className="px-4 py-2 border-2 border-gray-200">
-                            <div className='border-2 w-[80px] pl-1 h-auto rounded-xl flex flex-row text-gray-500'>
-                                <Hash className="h-4 w-4 " />
-                                {brandItem.tags}
-                            </div>
+                            <td className="px-4 py-2 b">
+                                <div className='flex flex-row items-center'>
+                                    <div className="border-2 rounded-md text-gray-500 bg-red-200 flex flex-row pl-2" style={{ width: `${brandItem.tags.length * 12}px` }}>
+                                        {brandItem.tags}
+                                    </div>
+                                </div>
+                            </td> 
                             </td>
                             <td className="px-4 py-2 border-2 border-gray-200">
                                 <div className='flex flex-row items-center'>
-                                    <div className="border-2 rounded-md text-gray-500 bg-red-200 flex flex-row pl-2" style={{ width: `${brandItem.categories.length * 20}px` }}>
+                                    <div className="border-2 rounded-md text-gray-500 bg-red-200 flex flex-row pl-2" style={{ width: `${brandItem.nextMeeting.length * 20}px` }}>
                                         {brandItem.nextMeeting}
                                     </div>
                                 </div>

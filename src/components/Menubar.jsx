@@ -21,64 +21,64 @@ const Menubar = () => {
   ];
   
   return (
-    <div className="flex flex-col min-h-screen m-3 justify-between w-full ">
-      <div className='flex flex-col justify-between'>
-        <div className='flex justify-between'>
-          <div className="flex flex-row">
-            <div className="w-10 h-10 bg-black rounded-md">
-              <h1 className='text-white pl-2 pt-1'>Lg</h1>
-            </div>
-            <div className="flex flex-col">
-              <h1 className="text-gray-400 pl-2 text-[12px]">INC</h1>
-              <h1 className='text-[15px] pl-2'>InnovateHub</h1>
-            </div>
+    <div className="flex flex-col min-h-screen m-3 justify-between w-full overflow-x-auto">
+    <div className='flex flex-col justify-between'>
+      <div className='flex justify-between w-auto'>
+        <div className="flex flex-row">
+          <div className="w-10 h-10 bg-black rounded-md">
+            <h1 className='text-white pl-2 pt-1'>Lg</h1>
           </div>
-          <img src="/Avater.jpg" className=' w-14 h-14 rounded-full' alt="Avatar"/>
-        </div>
-        <div className='mt-7 flex flex-col'>
-          <div>
-            <button className='w-[100%] h-15 rounded-md border-2 inline-flex p-2 hover:bg-gray-100 justify-between'>
-              <div className="flex flex-row">
-                <PenTool className='h-6 w-6' />
-                <h2 className='ml-2'>Design Team</h2>
-              </div>
-              <div className="w-10 h-6 rounded-md bg-gray-300 flex flex-row">
-                <Plus className='rotate-45 h-6 w-6 ' />
-                +1
-              </div>
-            </button>
-          </div>
-          <div>
-            <button className='w-[100%] h-15 rounded-md border-2 inline-flex p-2 hover:bg-gray-100 justify-between'>
-              <div className="flex flex-row">
-                <Volume1 className='h-6 w-6' />
-                <h2 className='ml-2 '>Marketing Team</h2>
-              </div>
-              <div className="w-10 h-6 rounded-md bg-gray-300 flex flex-row">
-                <Plus className='rotate-45 h-6 w-6 ' />
-                +2
-              </div>
-            </button>
-          </div>
-          <div>
-            <button className='w-[100%] h-15 rounded-md border-2 inline-flex p-2 hover:bg-gray-100 justify-between'>
-              <div className="flex flex-row">
-                <ChevronsLeftRight className='h-6 w-6' />
-                <h2 className='text-[14px] '>Development Team</h2>
-              </div>
-              <div className="w-10 h-6 rounded-md bg-gray-300 flex flex-row">
-                <Plus className='rotate-45 h-6 w-6 ' />
-                +3
-              </div>
-            </button>
-          </div>
-          <div>
-            <button className='w-[100%] h-15 rounded-md border-2 inline-flex p-2  hover:bg-gray-100  text-gray-400'>
-              <PlusSquare className='h-6 w-6 ' />
-              <h2 className='ml-2'>Create a Team</h2>
-            </button>
+          <div className="flex flex-col">
+            <h1 className="text-gray-400 pl-2 text-[12px]">INC</h1>
+            <h1 className='text-[15px] pl-2'>InnovateHub</h1>
           </div>
         </div>
+        <img src="/Avater.jpg" className=' w-10 h-10 rounded-full' alt="Avatar"/>
+      </div>
+      <div className='mt-7 flex flex-col border-2 rounded-md'>
+        <div className=''>
+          <button className='w-[100%] h-15 rounded-md  inline-flex p-2 hover:bg-gray-100 justify-between hover:border-2 '>
+            <div className="flex flex-row">
+              <PenTool className='h-6 w-6' />
+              <h2 className='ml-2'>Design Team</h2>
+            </div>
+            <div className="w-10 h-6 rounded-md bg-gray-300 flex flex-row">
+              <Plus className='rotate-45 h-6 w-6 ' />
+              +1
+            </div>
+          </button>
+        </div>
+        <div>
+          <button className='w-[100%] h-15 rounded-md hover:border-2 inline-flex p-2 hover:bg-gray-100 justify-between'>
+            <div className="flex flex-row">
+              <Volume1 className='h-6 w-6' />
+              <h2 className='ml-2 '>Marketing Team</h2>
+            </div>
+            <div className="w-10 h-6 rounded-md bg-gray-300 flex flex-row">
+              <Plus className='rotate-45 h-6 w-6 ' />
+              +2
+            </div>
+          </button>
+        </div>
+        <div>
+          <button className='w-[100%] h-15 rounded-md hover:border-2 inline-flex p-2 hover:bg-gray-100 justify-between'>
+            <div className="flex flex-row">
+              <ChevronsLeftRight className='h-6 w-6' />
+              <h2 className='text-[14px] '>Development Team</h2>
+            </div>
+            <div className="w-10 h-6 rounded-md bg-gray-300 flex flex-row">
+              <Plus className='rotate-45 h-6 w-6 ' />
+              +3
+            </div>
+          </button>
+        </div>
+        <div>
+          <button className='w-[100%] h-15 rounded-md border-2 inline-flex p-2  hover:bg-gray-100  text-gray-400'>
+            <PlusSquare className='h-6 w-6 ' />
+            <h2 className='ml-2'>Create a Team</h2>
+          </button>
+        </div>
+      </div>
         <div className='pt-5 flex flex-col justify-between '>
           <div className='flex flex-col'>
             <div className=' flex text-gray-400  justify-between'>
